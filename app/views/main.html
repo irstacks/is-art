@@ -1,8 +1,25 @@
 
 
+  <div class="row" style="margin-left: 10px; margin-right: 10px; font-size: .8em; margin-top: 50px;">
+    <p class="text-muted">
+      "Self Portrait." <br>
+      Isaac Ardis <br>
+      Bytes, etc.
+    </p>
+    <p class="text-muted">
+      Created: {{ first | FileNameTime }} (Nov 24, 2015 7:36am)<br>
+      Last updated: {{ last | FileNameTime }}
+    </p>
+    <p class="text-muted">
+      When it's on, my computer takes my photograph at random intervals every 6-18 minutes with probability .5.
+    </p>
 
+    <p class="text-muted">
+      <a href="https://github.com/irstacks/self-portrait">https://github.com/irstacks/self-portrait</a>
+    </p>
+  </div>
 
-  <div  ng-repeat="self in selfies" class="col-sm-1 portrait-frame" >
+  <div  ng-repeat="self in selfies" class="col-xs-3 col-sm-1 portrait-frame" >
     <img class="portrait" src="images/{{self}}" />
   </div>
 

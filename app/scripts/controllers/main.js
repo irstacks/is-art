@@ -13,6 +13,10 @@ angular.module('isArtApp')
     $scope.testes = 'successy';
 
     $scope.selfies = SelfieList.SELFIES;
+
+    $scope.selfieCount = $scope.selfies.length;
+    $scope.first = $scope.selfies[0];
+    $scope.last = $scope.selfies[$scope.selfieCount -1];
     // var fs = require('fs');
     // function getFiles (dir, files_){
     //     files_ = files_ || [];
