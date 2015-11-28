@@ -22,13 +22,17 @@ angular
   .config(function ($stateProvider, $urlRouterProvider) {
 
     // ROUTING with ui.router
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/self-portrait');
     $stateProvider
-      // this state is placed in the <ion-nav-view> in the index.html
       .state('main', {
-        url: '/',
+        url: '/self-portrait',
         // abstract: true,
         templateUrl: '../views/main.html',
+        controller: 'MainCtrl'
+      })
+      .state('main.gif', {
+        url: '/gif',
+        templateUrl: '../views/gif.html',
         controller: 'MainCtrl'
       });
   });
