@@ -21,18 +21,34 @@ angular
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
 
-    // ROUTING with ui.router
     $urlRouterProvider.otherwise('/self-portrait');
     $stateProvider
-      .state('main', {
-        url: '/self-portrait',
-        // abstract: true,
-        templateUrl: '../views/main.html',
+
+      .state('base', {
+        abstract: true,
+        url: '/',
+        templateUrl: '../views/base.html',
         controller: 'MainCtrl'
       })
-      .state('main.gif', {
-        url: '/gif',
-        templateUrl: '../views/gif.html',
-        controller: 'MainCtrl'
-      });
+        .state('base.arrangements', {
+          abstract: true,
+          url: 'arrangements',
+          templateUrl: '../views/arrangements.html'
+        })
+          .state('base.arrangements.ats', {
+            url: '/ats',
+            templateUrl: '../views/arrangements-ats.html'
+          })
+
+        .state('base.self-portrait', {
+          url: 'self-portrait',
+          // abstract: true,
+          templateUrl: '../views/self-portrait.html'
+          // controller: 'MainCtrl'
+        })
+        .state('base.self-portrait.gif', {
+          url: '/gif',
+          templateUrl: '../views/gif.html'
+          // controller: 'MainCtrl' // inherits
+        });
   });

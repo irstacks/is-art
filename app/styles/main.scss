@@ -1,6 +1,36 @@
 
 @import 'bootstrap-sass/assets/stylesheets/bootstrap';
 
+.fat {
+  &.fat-head {
+    margin-top: 40px;
+  }
+  &.fat-belly {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+.type {
+  &.type-small {
+    font-size: .8em;
+  }
+  &.type-indented {
+    margin-left: 5px;
+  }
+}
+
+.underline {
+  &.small-gray {
+    border-bottom: 1px solid lightgray;
+  }
+}
+
+.padding {
+  padding: 10px;
+}
+// margin-left: 10px; margin-right: 10px; font-size: .8em; margin-top: 50px;
+
 .portrait {
   width: 100%;
   height: 100%;

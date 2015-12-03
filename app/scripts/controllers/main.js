@@ -8,7 +8,7 @@
  * Controller of the isArtApp
  */
 angular.module('isArtApp')
-  .controller('MainCtrl', function ($scope, SelfieList) {
+  .controller('MainCtrl', function ($scope, SelfieList, StaticImages) {
 
     $scope.testes = 'successy';
 
@@ -17,5 +17,7 @@ angular.module('isArtApp')
     $scope.selfieCount = $scope.selfies.length;
     $scope.first = $scope.selfies[0];
     $scope.last = $scope.selfies[$scope.selfieCount -1];
+
+    $scope.atsImages = StaticImages.ATS;
 
   });
