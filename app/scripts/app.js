@@ -39,6 +39,20 @@ angular
             url: '/ats',
             templateUrl: '../views/arrangements-ats.html'
           })
+          .state('base.arrangements.outside', {
+            url: '/outside',
+            templateUrl: '../views/arrangements-outside.html'
+          })
+
+        .state('base.photographs', {
+          abstract: true,
+          url: 'photographs',
+          templateUrl: '../views/photographs.html'
+        })
+          .state('base.photographs.construction', {
+            url: '/construction',
+            templateUrl: '../views/photographs-construction.html'
+          })
 
         .state('base.self-portrait', {
           url: 'self-portrait',
